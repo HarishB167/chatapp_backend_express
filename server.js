@@ -22,6 +22,8 @@ db.on("error", (error) => console.error(error));
 
 const userRouter = require("./routes/users");
 app.use("/users", userRouter);
+const authRouter = require("./routes/auth");
+app.use("/auth", authRouter);
 
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`);

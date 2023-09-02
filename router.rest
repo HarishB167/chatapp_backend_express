@@ -1,0 +1,37 @@
+GET http://localhost:3000/auth/users
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiSGFyaXNoIiwiZW1haWwiOiJoYXJpc2hAbWFpbC5jb20iLCJwaG90b0xpbmsiOiJodHRwOi8vaW1hZ2UuY29tL2kuanBnIiwiaWF0IjoxNjkzNjUyMjc0LCJleHAiOjE2OTM2NTIyODl9.4KpWbxJqslCSYDE0ve5w7-0qcsbeJZuzWLxmpGNb2e8
+
+###
+POST http://localhost:3000/auth/login
+Content-Type: application/json
+
+{
+    "email": "harish@mail.com",
+    "password": "password"
+}
+###
+POST http://localhost:3000/auth/token
+Content-Type: application/json
+
+{
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiSGFyaXNoIiwiZW1haWwiOiJoYXJpc2hAbWFpbC5jb20iLCJwaG90b0xpbmsiOiJodHRwOi8vaW1hZ2UuY29tL2kuanBnIiwiaWF0IjoxNjkzNjUyMjI4fQ.ZIlFkWQVd-cbVWR0J1Ztu_Lsy4dnYDF0ioqFhie5k_Y"
+}
+
+###
+POST http://localhost:3000/auth/register
+Content-Type: application/json
+
+{
+    "name": "Harish",
+    "email": "harish@mail.com",
+    "photoLink": "http://image.com/i.jpg",
+    "password" : "password"
+}
+
+###
+DELETE http://localhost:3000/auth/logout
+Content-Type: application/json
+
+{
+    "token" : "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiSGFyaXNoIiwiZW1haWwiOiJoYXJpc2hAbWFpbC5jb20iLCJwaG90b0xpbmsiOiJodHRwOi8vaW1hZ2UuY29tL2kuanBnIiwiaWF0IjoxNjkzNjUyMjI4fQ.ZIlFkWQVd-cbVWR0J1Ztu_Lsy4dnYDF0ioqFhie5k_Y"
+}
