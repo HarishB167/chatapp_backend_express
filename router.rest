@@ -1,5 +1,5 @@
 GET http://localhost:3000/auth/users
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiSGFyaXNoIiwiZW1haWwiOiJoYXJpc2hAbWFpbC5jb20iLCJwaG90b0xpbmsiOiJodHRwOi8vaW1hZ2UuY29tL2kuanBnIiwiaWF0IjoxNjkzNjUyMjc0LCJleHAiOjE2OTM2NTIyODl9.4KpWbxJqslCSYDE0ve5w7-0qcsbeJZuzWLxmpGNb2e8
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiSGFyaXNoIiwiZW1haWwiOiJoYXJpc2hAbWFpbC5jb20iLCJwaG90b0xpbmsiOiJodHRwOi8vaW1hZ2UuY29tL2kuanBnIiwiaWF0IjoxNjkzNjU0MTA2LCJleHAiOjE2OTM2NTUwMDZ9.472rGh2hLIDeEsZYkRzyo7yFYZlIsMzUpnzbnu1OmQ4
 
 ###
 POST http://localhost:3000/auth/login
@@ -34,4 +34,17 @@ Content-Type: application/json
 
 {
     "token" : "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiSGFyaXNoIiwiZW1haWwiOiJoYXJpc2hAbWFpbC5jb20iLCJwaG90b0xpbmsiOiJodHRwOi8vaW1hZ2UuY29tL2kuanBnIiwiaWF0IjoxNjkzNjUyMjI4fQ.ZIlFkWQVd-cbVWR0J1Ztu_Lsy4dnYDF0ioqFhie5k_Y"
+}
+
+###
+GET http://localhost:3000/messages
+
+###
+POST http://localhost:3000/messages
+Content-Type: application/json
+
+{
+    "sender" : "64f30d9a55c9776ad6d0545d",
+    "receiver" : "64f30d9a55c9776ad6d0545d",
+    "content" : "sample message"
 }

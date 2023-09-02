@@ -20,10 +20,12 @@ const db = mongoose.connection;
 db.once("open", () => console.log("Connected to Database"));
 db.on("error", (error) => console.error(error));
 
-const userRouter = require("./routes/users");
-app.use("/users", userRouter);
 const authRouter = require("./routes/auth");
 app.use("/auth", authRouter);
+const userRouter = require("./routes/users");
+app.use("/users", userRouter);
+const messagesRouter = require("./routes/messages");
+app.use("/messages", messagesRouter);
 
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`);
